@@ -14,18 +14,46 @@ html, body {
   grid-template-rows: 1fr 1fr;
   height: 100vh;
   text-align: center;
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: minmax(300px, 1fr) 1fr;
+    grid-template-rows: initial;
+  }
 }
 
 .logo-container {
   align-self: center;
+
+  @media screen and (min-width: 768px) {
+    padding-right: 64px;
+  }
 }
 
 .logo {
   height: 80px;
+
+  @media screen and (min-width: 768px) {
+    height: 100%;
+    max-height: 160px;
+  }
 }
 
 .waitlist {
   margin-top: -40px;
+
+  @media screen and (min-width: 768px) {
+    align-self: center;
+    padding: 24px;
+    position: relative;
+
+    &::before {
+      border-left: 1px solid #1A1A1A;
+      content: '';
+      left: 0;
+      height: 100%;
+      position: absolute;
+    }
+  }
 }
 
 .waitlist .header {
@@ -52,6 +80,15 @@ html, body {
   justify-content: space-between;
   margin: 48px 0;
   padding: 0 24px;
+
+  @media screen and (min-width: 490px) {
+    justify-content: center;
+    column-gap: 64px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 0 120px;
+  }
 }
 
 .social-icons img {
@@ -65,6 +102,7 @@ html, body {
 }
 
 .subscribe-form {
+  align-items: center;
   display: flex;
   flex-direction: column;
   row-gap: 20px;
@@ -73,6 +111,7 @@ html, body {
 
 .subscribe-form .input-field {
   position: relative;
+  width: fit-content;
 }
 
 .subscribe-form .input-field::after {
@@ -83,7 +122,7 @@ html, body {
   opacity: 80%;
   position: absolute;
   transform: translateX(-50%);
-  width: 70%;
+  width: 80%;
 }
 
 .subscribe-form input {
@@ -96,6 +135,10 @@ html, body {
   outline: none;
   padding: 12px 16px;
   text-align: center;
+
+  @media screen and (min-width: 768px) {
+    padding: 12px 64px;
+  }
 }
 
 .subscribe-form button {
