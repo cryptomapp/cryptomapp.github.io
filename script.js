@@ -1,6 +1,6 @@
 const countdown = () => {
   const now = new Date();
-  const eventDate = new Date(2023, 7, 15); // remember, JavaScript month index is 0-based.
+  const eventDate = new Date(2023, 7, 16); // remember, JavaScript month index is 0-based.
 
   let remTime = eventDate.getTime() - now.getTime();
 
