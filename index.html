@@ -3,32 +3,79 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="script.js"></script>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
-    <title>Document</title>
+    <title>Cryptomapp</title>
   </head>
   <body>
     <div class="container">
       <div class="logo-container">
-        <img class="logo" src="./assets//logo.png" alt="missing.png" />
+        <img
+          width="640"
+          height="360"
+          class="logo"
+          src="./assets//logo.png"
+          alt="missing.png"
+        />
+        <div class="countdown">
+          <span id="days">00</span>d <span id="hours">00</span>h
+          <span id="minutes">00</span>m <span id="seconds">00</span>s
+        </div>
       </div>
       <div class="waitlist">
         <h1 class="header">Join the Waitlist</h1>
         <p class="follow-text">
           This is only beginning, <br />
-          check out our <span class="litepaper">litepaper</span>, <br />
+          check out our
+          <a href="./assets//litepaper.pdf" target="_blank" class="litepaper"
+            >litepaper</a
+          >,
+          <br />
           follow us:
         </p>
         <div class="social-icons">
-          <img src="./assets/twitter.png" alt="missing.png" />
-          <img src="./assets/discord.png" alt="missing.png" />
-          <img src="./assets/telegram.png" alt="missing.png" />
-          <img src="./assets/linkedin.png" alt="missing.png" />
+          <div class="icon-container">
+            <a href="https://twitter.com/app_cryptom" target="_blank">
+              <img
+                width="36"
+                height="36"
+                src="./assets/twitter.png"
+                alt="missing.png"
+              />
+            </a>
+          </div>
+          <div class="icon-container">
+            <img
+              width="36"
+              height="27"
+              src="./assets/discord.png"
+              alt="missing.png"
+            />
+          </div>
+          <div class="icon-container">
+            <a href="https://medium.com/@cryptomapp" target="_blank">
+              <img
+                width="36"
+                height="36"
+                src="./assets/medium.png"
+                alt="missing.png"
+              />
+            </a>
+          </div>
+          <div class="icon-container">
+            <img
+              width="36"
+              height="36"
+              src="./assets/youtube.png"
+              alt="missing.png"
+            />
+          </div>
         </div>
         <p class="subscripe-text">Or just subscribe to our newsletter:</p>
         <form class="subscribe-form" action="#" method="post">
