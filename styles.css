@@ -60,8 +60,9 @@ html, body {
 }
 
 .countdown {
-  font-family: 'Raleway';
+  font-family: 'Raleway', sans-serif;
   font-size: 28px;
+  font-weight: 700;
   margin-top: 12px;
   min-height: 33px;
   text-shadow: 0 5px 8px #00000029;
