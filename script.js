@@ -26,5 +26,5 @@ const countdown = () => {
 };
 
 window.addEventListener("DOMContentLoaded", () => {
-  countdown();
+  // countdown();
 });
