@@ -3,91 +3,197 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script defer src="script.js"></script>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" href="assets/icon.png" type="image/x-icon" />
-    <title>CryptoMapp</title>
-   <!-- MailerLite Universal -->
-  <script>
-    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-    ml('account', '506694');
-  </script>
-<!-- End MailerLite Universal -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:wght@500&family=Raleway:wght@800&family=Roboto+Condensed&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@500&family=Raleway:wght@800&family=Roboto+Condensed&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"
+    />
+    <script src="script/index.js"></script>
+    <script src="script/custom-checkmark.js"></script>
+    <script src="script/custom-arrows.js"></script>
+    <script src="script/custom-briefcase.js"></script>
+    <script src="script/custom-aspect-ratio.js"></script>
+    <script type="module" src="script/custom-twitter-icon.js"></script>
+    <script type="module" src="script/custom-linkedin-icon.js"></script>
+    <script type="module" src="script/custom-discord-link.js"></script>
+    <script type="module" src="script/custom-medium-link.js"></script>
+    <script type="module" src="script/custom-youtube-link.js"></script>
+    <script type="module" src="script/custom-medium2-link.js"></script>
+    <script type="module" src="script/custom-tiktok-link.js"></script>
+    <script type="module" src="script/custom-twitter-link.js"></script>
+    <script type="module" src="script/custom-card.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <title>Cryptomapp</title>
   </head>
   <body>
-    <div id="cryptomapp-subscription" class="container">
-      <div class="logo-container">
-        <img
-          width="640"
-          height="360"
-          class="logo"
-          src="./assets//logo.png"
-          alt="missing.png"
-        />
-<!--         <div class="countdown">
-          <span id="days">00</span>d <span id="hours">00</span>h
-          <span id="minutes">00</span>m <span id="seconds">00</span>s
-        </div> -->
-      </div>
-      <div class="waitlist">
-        <h1 class="header">Join the Waitlist</h1>
-        <p class="follow-text">
-          This is only beginning, <br />
-          check out our
-          <a href="./litepaper.pdf" target="_blank" class="litepaper"
-            >litepaper</a
-          >,
-          <br />
-          follow us:
-        </p>
-        <div class="social-icons">
-          <div class="icon-container">
-            <a href="https://twitter.com/app_cryptom" target="_blank">
-              <img
-                width="36"
-                height="36"
-                src="./assets/twitter.png"
-                alt="missing.png"
-              />
+    <div class="container">
+      <div class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button
+              type="button"
+              class="navbar-toggle collapsed"
+              data-toggle="collapse"
+              data-target="#collapibleMenu"
+            >
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand">
+              <img class="img" src="assets/logo.png" alt="missing.png" />
             </a>
           </div>
-          <div class="icon-container">
-            <a href="https://discord.gg/wqkgu6zx" target="_blank">
-              <img
-                width="36"
-                height="27"
-                src="./assets/discord.png"
-                alt="missing.png"
-              />
-            </a>
-          </div>
-          <div class="icon-container">
-            <a href="https://medium.com/@cryptomapp" target="_blank">
-              <img
-                width="36"
-                height="36"
-                src="./assets/medium.png"
-                alt="missing.png"
-              />
-            </a>
-          </div>
-          <div class="icon-container">
-            <a href="https://www.youtube.com/channel/UC2z2_9yF5AGBQIv-aDhs0VQ" target="_blank"></a>
-              <img
-                width="36"
-                height="36"
-                src="./assets/youtube.png"
-                alt="missing.png"
-              />
-            </a>
+          <div class="collapse navbar-collapse" id="collapibleMenu">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#possibilities">Use cases</a></li>
+              <li><a href="#">Technologies</a></li>
+              <li><a href="#our-team-container">Founders</a></li>
+              <li><a href="#stay-connected-container">Contact</a></li>
+              <li>
+                <a id="litepaper" href="./assets/litepaper.pdf">Litepaper</a>
+              </li>
+            </ul>
           </div>
         </div>
-        <p class="subscripe-text">Or just subscribe to our newsletter:</p>
-        <div id="form-container">
-          <div class="ml-embedded subscribe-form" data-form="0BndqU"></div>
+      </div>
+      <div class="home">
+        <div class="image-container--small">
+          <img src="assets/main-image.png" alt="main-image.png" class="img" />
+        </div>
+
+        <div class="content">
+          <div class="hero">
+            <div class="hero-left">
+              <p class="caption first-paragraph">
+                Your gateway to a decentralized finances.
+              </p>
+              <header class="header">
+                <h3 class="h3">Welcome to CryptoMapp</h3>
+              </header>
+              <p class="body description">
+                CryptoMapp is a pioneering mobile platform seamlessly
+                integrating blockchain technology, redefining commerce for
+                traditional businesses and individuals, bridging real-world
+                assets and the digital economy.
+              </p>
+              <button class="btn btn-primary">Get the app</button>
+            </div>
+            <div class="hero-right">
+              <div class="image-container">
+                <img
+                  src="assets/main-image.png"
+                  alt="main-image.png"
+                  class="img"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="image-container--medium">
+            <img src="assets/main-image.png" alt="main-image.png" class="img" />
+          </div>
+          <div class="possibilities-container">
+            <img
+              src="assets/landing-image.png"
+              alt="landing-image.png"
+              class="img landing-image"
+            />
+            <ul id="possibilities">
+              <h4 class="possibilities-header h4">Explore the Possibilities</h4>
+
+              <li class="body possibilities-item">
+                <div class="possibilities-item--container">
+                  <custom-checkmark></custom-checkmark>
+                  Discover Crypto-friendly Venues
+                </div>
+                <hr class="divider" />
+              </li>
+              <li class="body possibilities-item">
+                <div class="possibilities-item--container">
+                  <custom-arrows></custom-arrows>
+                  Seamless, Gasless Transactions
+                </div>
+                <hr class="divider" />
+              </li>
+              <li class="body possibilities-item">
+                <div class="possibilities-item--container">
+                  <custom-briefcase></custom-briefcase>
+                  Earn Reputation, Get Rewarded with MAP
+                </div>
+                <hr class="divider" />
+              </li>
+              <li class="body possibilities-item">
+                <div class="possibilities-item--container">
+                  <custom-aspect-ratio></custom-aspect-ratio>
+                  Invest in Real-world Economies
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- <h4 class="h4 powered-technology-header">
+            Powered by Innovative Technology
+          </h4> -->
+
+          <h4 class="h4 our-team-header">Meet Our Team</h4>
+          <div id="our-team-container">
+            <custom-card
+              title="Krzysztof"
+              subtitle="Product Lead"
+              img-src="krzysztof.png"
+              twitterUrl="#"
+              linkedinUrl="#"
+            ></custom-card>
+            <custom-card
+              title="Kofi"
+              subtitle="Community Lead"
+              imgSrc="kofi.png"
+              twitterUrl="#"
+              linkedinUrl="#"
+            ></custom-card>
+            <custom-card
+              title="Arek"
+              subtitle="Frontend Developer"
+              imgSrc="arek.png"
+              twitterUrl="#"
+              linkedinUrl="#"
+            ></custom-card>
+            <custom-card
+              title="Tomasz"
+              subtitle=""
+              imgSrc="tomasz.png"
+              twitterUrl="#"
+              linkedinUrl="#"
+            ></custom-card>
+          </div>
+          <div id="stay-connected-container">
+            <h3 class="h3 stay-connected-header">Stay connected</h3>
+            <div class="social-media">
+              <custom-discord-link href="#"></custom-discord-link>
+              <custom-medium-link href="#"></custom-medium-link>
+              <custom-youtube-link href="#"></custom-youtube-link>
+              <custom-medium2-link href="#"></custom-medium2-link>
+              <custom-tiktok-link href="#"></custom-tiktok-link>
+              <custom-twitter-link href="#"></custom-twitter-link>
+            </div>
+          </div>
         </div>
       </div>
     </div>

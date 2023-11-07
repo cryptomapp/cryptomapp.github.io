@@ -1,0 +1,264 @@
+.container {
+  background: #F3F3F3;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: initial !important;
+}
+
+.container .navbar {
+  background: #F3F3F3;
+  border: none;
+  margin-bottom: 96px;
+}
+
+.container .navbar-brand {
+  padding: 16px 0 0 16px;
+}
+
+.container .navbar-brand .img {
+  height: 40px;
+}
+
+.container .navbar-toggle {
+  border: none;
+  margin: 0;
+  padding: 10px 16px 0 0;
+}
+
+.container .navbar-default .navbar-toggle .icon-bar {
+  background: #121212;
+  height: 3px;
+  margin: 10px 0;
+  width: 40px;
+}
+
+.container .navbar-default .navbar-toggle:hover {
+  background: transparent;
+}
+
+.container .navbar-collapse {
+  border: none;
+}
+
+.container #litepaper {
+  border-radius: 24px;
+  background-color: #489148;
+  color: #fff;
+  display: none;
+  padding: 10px 44px;
+  margin-left: 64px;
+}
+
+.home {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  padding: 0 16px;
+}
+
+.home .content {
+  display: flex;
+  flex-direction: column;
+}
+
+.home .content .first-paragraph {
+  color: var(--foundation-cold-green-cold-green-500);
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+
+.home .content .header {
+  margin-bottom: 20px;
+}
+
+.home .content .description {
+  margin-bottom: 20px;
+}
+
+.home .image-container--medium {
+  display: none;
+}
+
+.home .image-container {
+  display: none;
+}
+
+.home .landing-image {
+  margin-top: 112px;
+  margin-bottom: 79px;
+}
+
+.home .possibilities-header {
+  margin-bottom: 40px;
+}
+
+.home #possibilities {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.home #possibilities .possibilities-item {
+  width: fit-content;
+}
+
+.home #possibilities .possibilities-item--container {
+  align-items: center;
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.home #possibilities .possibilities-item:not(:first-of-type) {
+  margin-top: 20px;
+}
+
+.home .powered-technology-header {
+  margin-top: 144px;
+}
+
+.home .our-team-header {
+  margin-top: 164px;
+  margin-bottom: 40px;
+}
+
+.home #stay-connected-container {
+  margin-top: 108px;
+  margin-bottom: 92px;
+}
+
+.home .social-media {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  padding: 0 32px;
+}
+
+.home .content .header,
+.home .content .description {
+  color: var(--foundation-grey-grey-700);
+  text-align: center;
+}
+
+.home .possibilities-header,
+.powered-technology-header,
+.our-team-header,
+.home .stay-connected-header {
+  color: var(--foundation-grey-grey-700);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+
+  .container .navbar-brand {
+    padding: 6px 0 0 24px;
+  }
+
+  .home .image-container--small {
+    display: none;
+  }
+
+  .home .image-container--medium {
+    display: block;
+  }
+
+  .home .image-container--medium .img {
+    float: right;
+    width: 60%;
+  }
+
+  .home .content .first-paragraph,
+  .home .content .header,
+  .home .content .description,
+  .home .possibilities-header,
+  .powered-technology-header {
+    text-align: left;
+  }
+
+  .home .content .description {
+    width: 80%;
+  }
+
+  .possibilities-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 168px;
+  }
+
+  .home #possibilities {
+    align-self: center;
+  }
+
+  #our-team-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .home #stay-connected-container {
+    margin-bottom: 88px;
+  }
+
+  .home .stay-connected-header {
+    font-size: 36px;
+    margin-bottom: 24px;
+  }
+
+  .home .social-media { 
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    padding: 0 128px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .home {
+    padding: 0 96px;
+  }
+
+  .home .hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .home .hero-left {
+    align-self: center;
+  }
+
+  .home .image-container--medium {
+    display: none;
+  }
+
+  .home .image-container {
+    display: block;
+  }
+
+  .home .landing-image {
+    margin: 0;
+  }
+
+  .home #possibilities {
+    justify-self: center;
+  }
+
+  .home #our-team-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 16px;
+  }
+
+  .home #stay-connected-container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .home .social-media {
+    padding: 0;
+  }
+}
+
+@media (min-width: 1920px) {
+  .home {
+    padding: 0 200px;
+  }
+}

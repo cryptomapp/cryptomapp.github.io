@@ -1,0 +1,98 @@
+:root {
+  --foundation-cold-green-cold-green-500: #66CC65;
+  --foundation-grey-grey-700: #121212;
+  --foundation-grey-grey-50: #E8E8E8;;
+  --foundation-blue-blue-600: #008BE1;
+  --foundation-blue-blue-50: #E6F5FE;
+  --white: #FFFFFF;
+}
+
+h3.h3 {
+  font-family: Montserrat;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 52px;
+  margin: 0;
+
+  @media (min-width: 768px) {
+    font-size: 52px;
+    line-height: 68px;
+  }
+
+  @media (min-width: 1440px) {
+    font-size: 80px;
+    line-height: 96px;
+  }
+}
+
+h4.h4 {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+  margin: 0;
+
+  @media (min-width: 768px) {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 52px;
+  }
+}
+
+.body {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0;
+}
+
+.caption {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+}
+
+.btn {
+  align-self: stretch !important;
+  align-items: center !important;
+  border: none !important;
+  border-radius: 24px !important;
+  display: flex !important;
+  gap: 4px !important;
+  justify-content: center !important;
+  padding: 16px 44px !important;
+  width: 100% !important;
+
+  @media (min-width: 768px) {
+    width: fit-content !important;
+  }
+}
+
+.btn.btn-primary {
+  background: var(--foundation-blue-blue-600) !important;
+  color: var(--foundation-blue-blue-50) !important;
+}
+
+.img {
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+}
+
+.divider {
+  border: 1px solid var(--foundation-grey-grey-50);
+  margin: 0;
+}
