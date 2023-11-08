@@ -1,4 +1,5 @@
-import { globalStyles } from "./global-styles.js";
+import { globalStyles } from "./global-styles.mjs";
+
 class CustomCard extends HTMLElement {
   constructor() {
     super();

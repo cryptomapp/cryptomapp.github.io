@@ -1,11 +1,8 @@
-import { globalStyles } from "./global-styles.js";
-
 class CustomLinkedinIcon extends HTMLElement {
   constructor() {
     super();
 
     this.attachShadow({ mode: "open" });
-    this.shadowRoot.adoptedStyleSheets = [globalStyles];
 
     this.render();
   }
