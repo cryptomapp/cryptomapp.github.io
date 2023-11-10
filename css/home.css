@@ -116,6 +116,12 @@
 
 .home .powered-technology-header {
   margin-top: 144px;
+  text-align: center;
+}
+
+.home .custom-tabs {
+  display: flex;
+  justify-content: center;
 }
 
 .home .our-team-header {

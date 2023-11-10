@@ -50,6 +50,13 @@ h4.h4 {
   margin: 0;
 }
 
+.body.bold {
+  font-weight: 700;
+  @media (min-width: 768px) {
+    font-size: 24px;
+  }
+}
+
 .caption {
   color: #000;
   font-family: Montserrat;

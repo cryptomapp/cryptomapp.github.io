@@ -30,8 +30,12 @@
     <script src="script/custom-arrows.js"></script>
     <script src="script/custom-briefcase.js"></script>
     <script src="script/custom-aspect-ratio.js"></script>
-    <script type="module" src="script/custom-twitter-icon.js"></script>
-    <script type="module" src="script/custom-linkedin-icon.js"></script>
+    <script src="script/custom-twitter-icon.js"></script>
+    <script src="script/custom-linkedin-icon.js"></script>
+    <script src="script/custom-phone-icon.js"></script>
+    <script src="script/custom-checkmark-square-icon.js"></script>
+    <script src="script/custom-blockchain-icon.js"></script>
+    <script src="script/custom-checkin-icon.js"></script>
     <script type="module" src="script/custom-discord-link.js"></script>
     <script type="module" src="script/custom-medium-link.js"></script>
     <script type="module" src="script/custom-youtube-link.js"></script>
@@ -39,6 +43,7 @@
     <script type="module" src="script/custom-tiktok-link.js"></script>
     <script type="module" src="script/custom-twitter-link.js"></script>
     <script type="module" src="script/custom-card.js"></script>
+    <script type="module" src="script/custom-tabs.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <title>Cryptomapp</title>
@@ -148,10 +153,10 @@
               </li>
             </ul>
           </div>
-          <!-- <h4 class="h4 powered-technology-header">
+          <h4 class="h4 powered-technology-header">
             Powered by Innovative Technology
-          </h4> -->
-
+          </h4>
+          <custom-tabs class="custom-tabs"></custom-tabs>
           <h4 class="h4 our-team-header">Meet Our Team</h4>
           <div id="our-team-container">
             <custom-card
@@ -197,5 +202,27 @@
         </div>
       </div>
     </div>
+
+    <script>
+      // Add event listeners to the icons
+      document.querySelectorAll(".icon").forEach(function (icon) {
+        icon.addEventListener("click", function () {
+          // Remove active classes from all icons and content
+          document.querySelectorAll(".icon").forEach(function (icon) {
+            icon.classList.remove("active-icon");
+          });
+          document.querySelectorAll(".content").forEach(function (content) {
+            content.classList.remove("active-content");
+          });
+
+          // Add the active class to the clicked icon
+          this.classList.add("active-icon");
+
+          // Find the corresponding content and make it active
+          const contentId = "content-" + this.id.split("-")[1];
+          document.getElementById(contentId).classList.add("active-content");
+        });
+      });
+    </script>
   </body>
 </html>
