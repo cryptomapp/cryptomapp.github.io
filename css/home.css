@@ -124,6 +124,32 @@
   justify-content: center;
 }
 
+.home .technologies-icons {
+  display: none;
+
+  @media (min-width: 768px) {
+    align-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    margin-top: 163px;
+    padding: 0 50px;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 0 109px;
+    gap: 40px;
+  }
+
+  @media (min-width: 1920px) {
+    gap: 60px;
+  }
+}
+
+.home .technologies-icons .img {
+  align-self: center;
+}
+
 .home .our-team-header {
   margin-top: 164px;
   margin-bottom: 40px;

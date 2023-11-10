@@ -1,10 +1,12 @@
-import { globalStyles } from "./global-styles.mjs";
+import { loadGlobalStyles } from "./global-styles.mjs";
 
 class CustomTabs extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
-    this.shadowRoot.adoptedStyleSheets = [globalStyles];
+    loadGlobalStyles().then((sheet) => {
+      this.shadowRoot.adoptedStyleSheets = [sheet];
+    });
 
     this.shadowRoot.innerHTML = `
         <style>
