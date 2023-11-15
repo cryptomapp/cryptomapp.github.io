@@ -70,19 +70,34 @@ class CustomTabs extends HTMLElement {
             height: 23px;
           }
 
+          .icon-container {
+            position: relative;
+            transition: background 0.2s linear, color 0.2s linear;
+          }
+
+          .icon-container:not(.active-icon):hover {
+            background: #E6F5FE;
+            color: #66CC65;
+          }
+
           .active-icon {
             background: #4CAF50;
             color: white;
-            position: relative;
           }
 
-          .active-icon::after {
+          .icon-container::after {
             content: "";
             position: absolute;
             bottom: -22px;
             left: 0;
             right: 0;
+            opacity: 0;
             border-bottom: 2px solid #666;
+            transition: opacity 0.5s ease-in-out;
+          }
+
+          .active-icon::after {
+            opacity: 1;
           }
 
           .description {
