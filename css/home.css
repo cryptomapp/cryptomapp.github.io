@@ -9,6 +9,22 @@
   background: #F3F3F3;
   border: none;
   margin-bottom: 96px;
+
+  @media (min-width: 768px) {
+    margin-top: 24px;
+  }
+}
+
+.container .navbar-right {
+  @media (min-width: 768px) {
+    align-items: center;
+    display: flex;
+  }
+}
+
+.container .navbar-right .btn {
+  margin-left: 8px;
+  width: fit-content;
 }
 
 .container .navbar-brand {
@@ -115,7 +131,7 @@
 }
 
 .home .powered-technology-header {
-  margin-top: 144px;
+  margin-top: 200px;
   text-align: center;
 }
 
@@ -132,7 +148,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 20px;
-    margin-top: 163px;
+    margin-top: 200px;
     padding: 0 50px;
   }
 
@@ -182,7 +198,6 @@
 }
 
 @media (min-width: 768px) {
-
   .container .navbar-brand {
     padding: 6px 0 0 24px;
   }
@@ -215,11 +230,15 @@
   .possibilities-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-top: 168px;
+    margin-top: 200px;
   }
 
   .home #possibilities {
     align-self: center;
+  }
+
+  .home .our-team-header {
+    margin-top: 250px;
   }
 
   #our-team-container {
@@ -229,7 +248,7 @@
   }
 
   .home #stay-connected-container {
-    margin-bottom: 88px;
+    margin-bottom: 44px;
   }
 
   .home .stay-connected-header {

@@ -1,4 +1,5 @@
 :root {
+  --foundation-cold-green-cold-green-700: #489148;
   --foundation-cold-green-cold-green-500: #66CC65;
   --foundation-grey-grey-700: #121212;
   --foundation-grey-grey-50: #E8E8E8;;
@@ -84,16 +85,26 @@ h4.h4 {
   display: flex !important;
   gap: 4px !important;
   justify-content: center !important;
-  padding: 16px 44px !important;
-  width: 100% !important;
+  padding: 12px 44px !important;
+  width: 100%;
 
   @media (min-width: 768px) {
-    width: fit-content !important;
+    width: fit-content;
   }
 }
 
 .btn.btn-primary {
   background: var(--foundation-blue-blue-600) !important;
+  color: var(--foundation-blue-blue-50) !important;
+}
+
+.btn a, .btn a:hover, .btn a:visited, .btn a:active, .btn a:focus {
+  text-decoration: none;
+  color: var(--foundation-blue-blue-50) !important;
+}
+
+.btn.btn-secondary {
+  background: var(--foundation-cold-green-cold-green-700) !important;
   color: var(--foundation-blue-blue-50) !important;
 }
 
