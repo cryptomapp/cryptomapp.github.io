@@ -98,6 +98,10 @@ h4.h4 {
   color: var(--foundation-blue-blue-50) !important;
 }
 
+.btn.btn-primary:hover {
+  background: #0064A8 !important;
+}
+
 .btn a, .btn a:hover, .btn a:visited, .btn a:active, .btn a:focus {
   text-decoration: none;
   color: var(--foundation-blue-blue-50) !important;
@@ -106,6 +110,10 @@ h4.h4 {
 .btn.btn-secondary {
   background: var(--foundation-cold-green-cold-green-700) !important;
   color: var(--foundation-blue-blue-50) !important;
+}
+
+.btn.btn-secondary:hover {
+  background: #2E6B3E !important;
 }
 
 .img {
