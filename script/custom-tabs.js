@@ -15,6 +15,7 @@ class CustomTabs extends HTMLElement {
             max-width: 1200px;
             text-align: center;
             margin-top: 40px;
+            width: 100%;
 
             @media (min-width: 1440px) {
               max-width: 927px;
@@ -85,7 +86,10 @@ class CustomTabs extends HTMLElement {
           }
 
           .description {
+            height: 200px;
             margin-top: 60px;
+            overflow: hidden;
+            position: relative;
           }
 
           .highlight {
@@ -93,19 +97,24 @@ class CustomTabs extends HTMLElement {
           }
 
           .content {
-            display: none;
-          }
-
-          .active-content {
-            display: block;
+            position: absolute;
             text-align: left;
-            transition: none;
+            transition: transform 0.5s ease-in-out;
 
             @media (min-width: 768px) {
               display: grid;
               grid-template-columns: 0.5fr 1fr;
             }
           }
+
+          .content.up {
+            transform: translateY(-200px);
+          }
+
+          .content.down {
+            transform: translateY(200px);
+          }
+
 
           .body.title {
             margin-bottom: 24px;
@@ -144,7 +153,7 @@ class CustomTabs extends HTMLElement {
               </div>
             </div>
 
-            <div id="content-checkmark" class="content">
+            <div id="content-checkmark" class="content down">
               <div class="body bold title">
                 Effortless KYC-less On-ramp
               </div>
@@ -156,7 +165,7 @@ class CustomTabs extends HTMLElement {
               </div>
             </div>
 
-            <div id="content-blockchain" class="content">
+            <div id="content-blockchain" class="content down">
               <div class="body bold title">
                 Blockchain Protocol Managing Registries and Reputation
               </div>
@@ -168,7 +177,7 @@ class CustomTabs extends HTMLElement {
               </div>
             </div>
 
-            <div id="content-checkin" class="content">
+            <div id="content-checkin" class="content down">
               <div class="body bold title">
                 MAP Holdings for Revenue Share Permission
               </div>
@@ -194,18 +203,93 @@ class CustomTabs extends HTMLElement {
   updateActiveContent(clickedIcon) {
     const icons = this.shadowRoot.querySelectorAll(".icon-container");
     const contents = this.shadowRoot.querySelectorAll(".content");
+    // Get corresponding content
+    const contentId = "content-" + clickedIcon.id.split("-")[1];
+    const activeContent = this.shadowRoot.getElementById(contentId);
+    const oldActiveContent = this.shadowRoot.querySelector(".active-content");
 
     // Remove active classes
     icons.forEach((icon) => icon.classList.remove("active-icon"));
-    contents.forEach((content) => content.classList.remove("active-content"));
+    this.updatePrevSibling(activeContent, oldActiveContent);
+    this.updateNextSibling(activeContent, oldActiveContent);
+    contents.forEach((content) => {
+      content.classList.remove("active-content");
+    });
 
     // Add active class to clicked icon
     clickedIcon.classList.add("active-icon");
 
-    // Get corresponding content
-    const contentId = "content-" + clickedIcon.id.split("-")[1];
-    const activeContent = this.shadowRoot.getElementById(contentId);
+    const transitionDelay =
+      activeContent.previousElementSibling?.style?.transitionDelay.split(
+        "s"
+      )[0] ??
+      activeContent.nextElementSibling?.style?.transitionDelay.split("s")[0] ??
+      0;
+
+    if (
+      oldActiveContent.previousElementSibling !== activeContent &&
+      oldActiveContent.nextElementSibling !== activeContent
+    ) {
+      activeContent.style.transitionDelay = +transitionDelay + 0.15 + "s";
+    }
     activeContent.classList.add("active-content");
+    activeContent.classList.remove("down");
+    activeContent.classList.remove("up");
+
+    contents.forEach((content) => {
+      setTimeout(() => {
+        content.style.transitionDelay = "";
+      }, 500);
+    });
+  }
+
+  updatePrevSibling(activeContent, oldActiveContent) {
+    const sibling = activeContent.previousElementSibling;
+    if (sibling) {
+      if (sibling === oldActiveContent) {
+        sibling.classList.add("up");
+        sibling.classList.remove("down");
+        return;
+      }
+      this.updatePrevSibling(
+        activeContent.previousElementSibling,
+        oldActiveContent
+      );
+      sibling.classList.add("up");
+      sibling.classList.remove("down");
+
+      if (sibling.previousElementSibling) {
+        const transitionDelay =
+          +sibling.previousElementSibling.style.transitionDelay.split("s")[0];
+        sibling.style.transitionDelay = transitionDelay + 0.15 + "s";
+      } else {
+        sibling.style.transitionDelay = "0s";
+      }
+    }
+  }
+
+  updateNextSibling(activeContent, oldActiveContent) {
+    const sibling = activeContent.nextElementSibling;
+    if (sibling) {
+      if (sibling === oldActiveContent) {
+        sibling.classList.add("down");
+        sibling.classList.remove("up");
+        return;
+      }
+      this.updateNextSibling(
+        activeContent.nextElementSibling,
+        oldActiveContent
+      );
+      sibling.classList.add("down");
+      sibling.classList.remove("up");
+      if (sibling.nextElementSibling) {
+        const transitionDelay =
+          +sibling.nextElementSibling.style.transitionDelay.split("s")[0];
+        sibling.style.transitionDelay = transitionDelay + 0.15 + "s";
+      } else {
+        sibling.style.transitionDelay = "0s";
+      }
+    }
   }
 }
 
