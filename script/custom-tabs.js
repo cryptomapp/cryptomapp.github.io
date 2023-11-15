@@ -101,10 +101,14 @@ class CustomTabs extends HTMLElement {
           }
 
           .description {
-            height: 200px;
+            height: 310px;
             margin-top: 60px;
             overflow: hidden;
             position: relative;
+
+            @media (min-width: 768px) {
+              height: 200px;
+            }
           }
 
           .highlight {
@@ -123,11 +127,19 @@ class CustomTabs extends HTMLElement {
           }
 
           .content.up {
-            transform: translateY(-200px);
+            transform: translateY(-310px);
+
+             @media (min-width: 768px) {
+              transform: translateY(-200px);
+            }
           }
 
           .content.down {
-            transform: translateY(200px);
+            transform: translateY(310px);
+
+             @media (min-width: 768px) {
+              transform: translateY(200px);
+            }
           }
 
 
