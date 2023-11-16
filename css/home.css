@@ -80,7 +80,7 @@
 .home .content .first-paragraph {
   color: var(--foundation-cold-green-cold-green-500);
   text-align: center;
-  margin-top: 40px;
+  margin-top: 80px;
   margin-bottom: 0;
 }
 
@@ -101,8 +101,8 @@
 }
 
 .home .landing-image {
-  margin-top: 112px;
-  margin-bottom: 79px;
+  margin-top: 162px;
+  margin-bottom: 162px;
 }
 
 .home .possibilities-header {
@@ -178,7 +178,7 @@
 
 .home .social-media {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   justify-items: center;
   padding: 0 32px;
 }
@@ -257,7 +257,7 @@
   }
 
   .home .social-media { 
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     padding: 0 128px;
   }
 }
