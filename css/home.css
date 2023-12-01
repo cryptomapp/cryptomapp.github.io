@@ -1,12 +1,12 @@
 .container {
-  background: #F3F3F3;
+  background: white;
   padding: 0 !important;
   margin: 0 !important;
   width: initial !important;
 }
 
 .container .navbar {
-  background: #F3F3F3;
+  background: white;
   border: none;
   margin-bottom: 96px;
 
@@ -199,6 +199,31 @@
 .home .stay-connected-header {
   color: var(--foundation-grey-grey-700);
   text-align: center;
+}
+
+.home--video {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 180px;
+  margin-bottom: 60px;
+  opacity: 0;
+  position: absolute;
+  transform: translateY(-500px);
+  transition: transform 2s opacity 2s;
+  z-index: -1;
+}
+
+.home--video.active {
+  opacity: 1;
+  position: relative;
+  transform: translateY(0);
+  z-index: 0;
+}
+
+.home--video video {
+  height: 100%;
+  width: 100%;
 }
 
 @media (min-width: 768px) {

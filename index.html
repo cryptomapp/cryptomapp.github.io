@@ -4,6 +4,7 @@
     <title>CryptoMapp | Blockchain Meets Brick & Mortar</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/assets/favicon-logo.png" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
@@ -110,8 +111,8 @@
                 traditional businesses and individuals, bridging real-world
                 assets and the digital economy.
               </p>
-              <button class="btn btn-primary">
-                <a href="deck.pdf">Our vision</a>
+              <button id="video_btn" class="btn btn-primary">
+                <a href="#video">Our vision</a>
               </button>
             </div>
             <div class="hero-right">
@@ -126,6 +127,12 @@
           </div>
           <div class="image-container--medium">
             <img src="assets/main-image.png" alt="main-image.png" class="img" />
+          </div>
+          <div id="video" class="home--video">
+            <video width="320" height="240" muted>
+              <source src="website_promo_1.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
           <div class="possibilities-container">
             <img
@@ -260,6 +267,35 @@
           document.getElementById(contentId).classList.add("active-content");
         });
       });
+
+      let stateOfVideo = "pause";
+      document.querySelector("#video_btn").addEventListener("click", (e) => {
+        e.preventDefault();
+        const videoContainer = document.querySelector("#video");
+        const video = document.querySelector("#video video");
+        video.play();
+        stateOfVideo = "play";
+        videoContainer.classList.add("active");
+        videoContainer.addEventListener("scroll", () => {
+          console.log("scroll");
+        });
+        videoContainer.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+          inline: "center",
+        });
+      });
+      document
+        .querySelector("#video video")
+        .addEventListener("click", function () {
+          if (stateOfVideo === "play") {
+            this.pause();
+            stateOfVideo = "pause";
+          } else {
+            stateOfVideo = "play";
+            this.play();
+          }
+        });
     </script>
   </body>
 </html>
