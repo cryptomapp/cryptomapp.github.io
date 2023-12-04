@@ -26,6 +26,7 @@ class CustomCard extends HTMLElement {
     const imgSrc = this.getAttribute("imgSrc") || "krzysztof.png";
     const twitterUrl = this.getAttribute("twitterUrl") || "#";
     const linkedinUrl = this.getAttribute("linkedinUrl") || "#";
+    const githubUrl = this.getAttribute("githubUrl") || "#";
 
     const style = `
       <style>
@@ -87,6 +88,11 @@ class CustomCard extends HTMLElement {
           ${
             !["Kofi"].includes(title)
               ? `<custom-linkedin-icon href='${linkedinUrl}'></custom-linkedin-icon>`
+              : ""
+          }
+          ${
+            ["Arek", "Tomasz"].includes(title)
+              ? `<custom-github-icon href='${githubUrl}'></custom-github-icon>`
               : ""
           }
         </div>
