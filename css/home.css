@@ -173,11 +173,11 @@
 
 .home #stay-connected-container {
   margin-top: 108px;
-  margin-bottom: 92px;
+  margin-bottom: 12px;
 }
 
 .home #investors-container {
-  margin-top: 22px;
+  margin-top: 10px;
   margin-bottom: 22px;
 }
 
@@ -208,7 +208,7 @@
 
 .home .investors-header {
   color: var(--foundation-grey-grey-700);
-  text-align: left;
+  text-align: center;
 }
 
 .home--video {
@@ -287,7 +287,7 @@
   }
 
   .home #stay-connected-container {
-    margin-bottom: 44px;
+    margin-bottom: 14px;
   }
 
   .home .stay-connected-header {
@@ -343,10 +343,9 @@
   }
 
   .home #investors-container {
-    max-width: 50%;
-    align-items: left;
+    align-items: center;  
+    justify-content: center;
     display: flex;
-    justify-content: space-between;
   }
 
   .home .social-media {
